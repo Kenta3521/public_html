@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "お化け屋敷",
+    "group": "演劇部",
+    "location": "第1体育館",
+    "description": "心臓の弱い方はご遠慮ください。本格的なお化け屋敷で、皆様をお待ちしております。",
+    "logo": "../assets/images/project_logo_1.png"
+  },
+  {
+    "id": 2,
+    "name": "ライブパフォーマンス",
+    "group": "軽音楽部",
+    "location": "野外ステージ",
+    "description": "学生バンドによる熱いライブパフォーマンスをお楽しみください。",
+    "logo": "../assets/images/project_logo_2.png"
+  },
+  {
+    "id": 3,
+    "name": "たこ焼き屋台",
+    "group": "3年A組",
+    "location": "屋台エリアA-3",
+    "description": "こだわりのたこ焼きを販売します。外はカリッと中はトロッとした絶品をどうぞ。",
+    "logo": "../assets/images/project_logo_3.png"
+  },
+  {
+    "id": 4,
+    "name": "美術展示会",
+    "group": "美術部",
+    "location": "美術棟2階",
+    "description": "部員たちの力作を展示しています。絵画、彫刻、写真など多彩な作品をご覧ください。",
+    "logo": "../assets/images/project_logo_4.png"
+  },
+  {
+    "id": 5,
+    "name": "書道パフォーマンス",
+    "group": "書道部",
+    "location": "野外ステージ",
+    "description": "大迫力の書道パフォーマンスを披露します。音楽に合わせて筆を走らせます。",
+    "logo": "../assets/images/project_logo_1.png"
+  },
+  {
+    "id": 6,
+    "name": "焼きそば屋台",
+    "group": "2年B組",
+    "location": "屋台エリアA-5",
+    "description": "鉄板で焼き上げる香ばしい焼きそばをご提供します。",
+    "logo": "../assets/images/project_logo_3.png"
+  },
+  {
+    "id": 7,
+    "name": "茶道体験",
+    "group": "茶道部",
+    "location": "和室1",
+    "description": "日本の伝統文化、茶道を体験できます。初心者の方も大歓迎です。",
+    "logo": "../assets/images/project_logo_4.png"
+  },
+  {
+    "id": 8,
+    "name": "ダンスショー",
+    "group": "ダンス部",
+    "location": "野外ステージ",
+    "description": "キレキレのダンスパフォーマンスで観客を魅了します。",
+    "logo": "../assets/images/project_logo_2.png"
+  }
+]

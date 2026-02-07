@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="テーマについて - 絢爛 - 銀嶺祭2025">
+    <title>テーマについて - 銀嶺祭 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .theme-hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, #1a2847 0%, var(--color-deep-navy) 100%);
+        }
+
+        .theme-title-large {
+            font-size: 8rem;
+            color: var(--color-gold);
+            text-shadow:
+                0 0 20px rgba(245, 228, 40, 0.8),
+                0 0 40px rgba(245, 228, 40, 0.6),
+                0 0 60px rgba(245, 228, 40, 0.4);
+            letter-spacing: 0.2em;
+            animation: pulse 3s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                text-shadow:
+                    0 0 20px rgba(245, 228, 40, 0.8),
+                    0 0 40px rgba(245, 228, 40, 0.6),
+                    0 0 60px rgba(245, 228, 40, 0.4);
+            }
+
+            50% {
+                text-shadow:
+                    0 0 30px rgba(245, 228, 40, 1),
+                    0 0 60px rgba(245, 228, 40, 0.8),
+                    0 0 90px rgba(245, 228, 40, 0.6);
+            }
+        }
+
+        .theme-content {
+            background: linear-gradient(135deg, rgba(26, 40, 71, 0.9) 0%, rgba(18, 30, 60, 0.9) 100%);
+            border: 2px solid rgba(245, 228, 40, 0.3);
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: var(--shadow-large), var(--shadow-gold);
+        }
+
+        .theme-text {
+            font-size: 1.4rem;
+            line-height: 2.5;
+            text-align: center;
+            color: var(--color-white);
+        }
+
+        @media (max-width: 768px) {
+            .theme-title-large {
+                font-size: 4rem;
+            }
+
+            .theme-content {
+                padding: 2rem;
+            }
+
+            .theme-text {
+                font-size: 1.1rem;
+                line-height: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main>
+        <!-- Theme Hero Section -->
+        <section class="theme-hero">
+            <div class="particles" id="particles"></div>
+            <h1 class="theme-title-large">絢爛</h1>
+        </section>
+
+        <!-- Theme Explanation Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">テーマに込めた想い</h2>
+
+                <div class="theme-content">
+                    <p class="theme-text">
+                        絢爛は、きらびやかで美しいことを指します。
+                    </p>
+                    <p class="theme-text">
+                        銀嶺祭の限りあるすべての時間が「絢爛」に染まり、
+                    </p>
+                    <p class="theme-text">
+                        人々の心に永くともります様に。
+                    </p>
+                    <p class="theme-text">
+                        そんな想いを込めて、
+                    </p>
+                    <p class="theme-text">
+                        今年のテーマを絢爛とさせていただきました。
+                    </p>
+                </div>
+
+                <!-- Additional Theme Description -->
+                <div class="card mt-4">
+                    <h3 class="card-title">絢爛に彩られる二日間</h3>
+                    <p class="card-text" style="line-height: 2;">
+                        銀嶺祭の二日間は、きらびやかで華やかな時間に満ちています。
+                        学生たちが心を込めて準備した企画、色とりどりの装飾、
+                        賑やかな音楽や笑顔。そのすべてが「絢爛」を体現しています。
+                    </p>
+                    <p class="card-text" style="line-height: 2;">
+                        ご来場いただく皆様にとって、この二日間が特別な思い出となり、
+                        心に永く残る美しい時間となることを願っています。
+                    </p>
+                </div>
+
+                <!-- Back to Top Link -->
+                <div class="text-center mt-4">
+                    <a href="../index.html" class="btn btn-outline">トップページへ戻る</a>
+                    <a href="../projects/index.html" class="btn ml-2">企画一覧を見る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="../js/common.js"></script>
+    <script>
+        // Create floating particle effect
+        if (window.ginreiUtils) {
+            window.ginreiUtils.createParticles('particles', 30);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="アクセス - 信州大学松本キャンパスへのアクセス方法">
+    <title>アクセス - 銀嶺祭 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .map-container {
+            width: 100%;
+            height: 500px;
+            border: 2px solid rgba(245, 228, 40, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-large);
+            margin: 2rem 0;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .access-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center">アクセス</h1>
+                <p class="text-center mt-2" style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.8);">
+                    信州大学 松本キャンパスへのアクセス方法をご案内します。
+                </p>
+
+                <!-- Google Map -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.7391820374446!2d137.96799631526193!3d36.63877298000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d0ed7e8e8e8e9%3A0x1c8f8c8c8c8c8c8c!2z5L-h5bee5aSn5a2m!5e0!3m2!1sja!2sjp!4v1234567890123!5m2!1sja!2sjp"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="信州大学 松本キャンパス">
+                    </iframe>
+                </div>
+
+                <!-- Access Information -->
+                <div class="access-info">
+                    <div class="card">
+                        <h3 class="card-title">電車でお越しの方</h3>
+                        <p class="card-text">
+                            <strong class="text-gold">JR松本駅から</strong><br>
+                            • 松本駅お城口バスターミナルより信大横田循環線バスで約15分<br>
+                            • 「信州大学前」バス停下車、徒歩1分
+                        </p>
+                        <p class="card-text mt-2">
+                            <strong class="text-gold">松本駅からタクシー</strong><br>
+                            • 約10分（約1,500円）
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">お車でお越しの方</h3>
+                        <p class="card-text">
+                            <strong class="text-gold">長野自動車道</strong><br>
+                            • 松本ICより約15分<br>
+                            • 駐車場に限りがございますので、できるだけ公共交通機関をご利用ください
+                        </p>
+                        <p class="card-text mt-2" style="color: var(--color-red);">
+                            ※当日は混雑が予想されます。余裕を持ってお越しください。
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">住所</h3>
+                        <p class="card-text">
+                            〒390-8621<br>
+                            長野県松本市旭3-1-1<br>
+                            信州大学 松本キャンパス
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">お問い合わせ</h3>
+                        <p class="card-text">
+                            銀嶺祭実行委員会<br>
+                            Email: info@ginreisai.example.com<br>
+                            <span style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">
+                                ※返信には数日かかる場合があります
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Additional Links -->
+                <div class="text-center mt-4">
+                    <a href="../map/index.html" class="btn">キャンパスマップを見る</a>
+                    <a href="../index.html" class="btn btn-outline">トップページへ戻る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="../js/common.js"></script>
+</body>
+
+</html>

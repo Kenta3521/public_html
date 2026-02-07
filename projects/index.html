@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="企画一覧 - 銀嶺祭2025の全企画を検索">
+    <title>企画一覧 - 銀嶺祭 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center">企画一覧</h1>
+                <p class="text-center mt-2" style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.8);">
+                    銀嶺祭2025の企画をご紹介します。検索ボックスで企画名や団体名から探すことができます。
+                </p>
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <input type="text" id="search-input" class="search-input" placeholder="企画名または団体名で検索..."
+                        aria-label="企画検索">
+                </div>
+
+                <!-- Projects Grid -->
+                <div id="projects-grid" class="card-grid">
+                    <!-- Projects will be loaded here dynamically -->
+                </div>
+
+                <!-- No Results Message -->
+                <div id="no-results" class="hidden text-center mt-4">
+                    <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.6);">
+                        該当する企画が見つかりませんでした。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="../js/common.js"></script>
+    <script>
+        // Projects data and search functionality
+        let allProjects = [];
+
+        // Load projects from JSON
+        async function loadProjects() {
+            try {
+                const response = await fetch('../data/projects.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load projects');
+                }
+                allProjects = await response.json();
+                displayProjects(allProjects);
+            } catch (error) {
+                console.error('Error loading projects:', error);
+                document.getElementById('projects-grid').innerHTML =
+                    '<p class="text-center" style="color: rgba(255, 255, 255, 0.6);">企画データの読み込みに失敗しました。</p>';
+            }
+        }
+
+        // Display projects
+        function displayProjects(projects) {
+            const grid = document.getElementById('projects-grid');
+            const noResults = document.getElementById('no-results');
+
+            if (projects.length === 0) {
+                grid.innerHTML = '';
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            noResults.classList.add('hidden');
+
+            grid.innerHTML = projects.map(project => `
+        <div class="card" data-project-id="${project.id}">
+          <img src="${project.logo}" alt="${project.name}" class="card-image">
+          <h3 class="card-title">${project.name}</h3>
+          <p class="card-subtitle">${project.group}</p>
+          <p class="card-text">
+            <strong style="color: var(--color-gold);">会場:</strong> ${project.location}
+          </p>
+          <p class="card-text">${project.description}</p>
+        </div>
+      `).join('');
+        }
+
+        // Search functionality
+        function searchProjects(query) {
+            const searchTerm = query.toLowerCase().trim();
+
+            if (!searchTerm) {
+                displayProjects(allProjects);
+                return;
+            }
+
+            const filteredProjects = allProjects.filter(project => {
+                const nameMatch = project.name.toLowerCase().includes(searchTerm);
+                const groupMatch = project.group.toLowerCase().includes(searchTerm);
+                return nameMatch || groupMatch;
+            });
+
+            displayProjects(filteredProjects);
+        }
+
+        // Initialize search input listener
+        function initializeSearch() {
+            const searchInput = document.getElementById('search-input');
+
+            // Real-time search as user types
+            searchInput.addEventListener('input', (e) => {
+                searchProjects(e.target.value);
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProjects();
+            initializeSearch();
+        });
+    </script>
+</body>
+
+</html>

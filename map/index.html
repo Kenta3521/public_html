@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="キャンパスマップ - 銀嶺祭2025会場案内">
+    <title>キャンパスマップ - 銀嶺祭 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .map-image-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            border: 2px solid rgba(245, 228, 40, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-large), var(--shadow-gold);
+            background: rgba(26, 40, 71, 0.5);
+        }
+
+        .map-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            background: rgba(26, 40, 71, 0.5);
+            border: 1px solid rgba(245, 228, 40, 0.2);
+            border-radius: 4px;
+        }
+
+        .legend-color {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center">キャンパスマップ</h1>
+                <p class="text-center mt-2" style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.8);">
+                    信州大学松本キャンパスの会場案内図です。各企画の場所をご確認ください。
+                </p>
+
+                <!-- Campus Map Image -->
+                <div class="map-image-container">
+                    <img src="../assets/images/campus_map.png" alt="銀嶺祭2025 キャンパスマップ" class="map-image">
+                </div>
+
+                <!-- Important Notes -->
+                <div class="card mt-3">
+                    <h3 class="card-title">ご来場の際のお願い</h3>
+                    <ul style="line-height: 2; color: rgba(255, 255, 255, 0.9);">
+                        <li>総合案内所では、パンフレットの配布や各種お問い合わせを受け付けております</li>
+                        <li>救護室は大学会館1階に設置しております</li>
+                        <li>お手洗いは各建物内にございます</li>
+                        <li>喫煙は指定エリアでお願いいたします</li>
+                        <li>ゴミは各所に設置されたゴミ箱へ分別してお捨てください</li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div class="text-center mt-4">
+                    <a href="../projects/index.html" class="btn">企画一覧を見る</a>
+                    <a href="../pamphlet/index.html" class="btn btn-outline">電子パンフレットを見る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="../js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="電子版パンフレット - 銀嶺祭2025">
+    <title>電子版パンフレット - 銀嶺祭 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .pdf-container {
+            width: 100%;
+            height: 800px;
+            max-width: 1000px;
+            margin: 2rem auto;
+            border: 2px solid rgba(245, 228, 40, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-large), var(--shadow-gold);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .pdf-container embed,
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--color-gold) 0%, #d4c820 100%);
+            color: var(--color-deep-navy);
+            font-family: var(--font-accent);
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-medium);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-large), var(--shadow-gold);
+            color: var(--color-deep-navy);
+        }
+
+        @media (max-width: 768px) {
+            .pdf-container {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="text-center">電子版パンフレット</h1>
+                <p class="text-center mt-2" style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.8);">
+                    銀嶺祭2025のパンフレットをオンラインでご覧いただけます。
+                </p>
+
+                <!-- Download Button -->
+                <div class="download-section">
+                    <a href="../assets/pamphlet/dummy.pdf" download="銀嶺祭2025_パンフレット.pdf" class="download-btn">
+                        <span>📥</span>
+                        <span>パンフレットをダウンロード</span>
+                    </a>
+                </div>
+
+                <!-- PDF Viewer -->
+                <div class="pdf-container">
+                    <embed src="../assets/pamphlet/dummy.pdf" type="application/pdf" title="銀嶺祭2025パンフレット">
+                    </embed>
+                </div>
+
+                <!-- Information Card -->
+                <div class="card mt-3">
+                    <h3 class="card-title">パンフレットについて</h3>
+                    <p class="card-text">
+                        こちらのパンフレットには、銀嶺祭2025の詳細情報が掲載されています。
+                    </p>
+                    <ul style="line-height: 2; color: rgba(255, 255, 255, 0.9); margin-top: 1rem;">
+                        <li>タイムスケジュール</li>
+                        <li>企画の詳細情報</li>
+                        <li>会場マップ</li>
+                        <li>アクセス情報</li>
+                        <li>注意事項・お願い</li>
+                    </ul>
+                    <p class="card-text mt-2" style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">
+                        ※PDFファイルをご覧いただくには、Adobe Acrobat Readerなどのソフトウェアが必要です。
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="text-center mt-4">
+                    <a href="../projects/index.html" class="btn">企画一覧を見る</a>
+                    <a href="../map/index.html" class="btn btn-outline">キャンパスマップ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="../js/common.js"></script>
+</body>
+
+</html>
