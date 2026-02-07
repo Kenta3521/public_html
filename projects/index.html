@@ -25,18 +25,13 @@
                     銀嶺祭2025の企画をご紹介します。検索ボックスで企画名や団体名から探すことができます。
                 </p>
 
-                <!-- Search Box -->
                 <div class="search-box">
                     <input type="text" id="search-input" class="search-input" placeholder="企画名または団体名で検索..."
                         aria-label="企画検索">
                 </div>
 
-                <!-- Projects Grid -->
                 <div id="projects-grid" class="card-grid">
-                    <!-- Projects will be loaded here dynamically -->
                 </div>
-
-                <!-- No Results Message -->
                 <div id="no-results" class="hidden text-center mt-4">
                     <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.6);">
                         該当する企画が見つかりませんでした。
@@ -50,10 +45,8 @@
 
     <script src="../js/common.js"></script>
     <script>
-        // Projects data and search functionality
         let allProjects = [];
 
-        // Load projects from JSON
         async function loadProjects() {
             try {
                 const response = await fetch('../data/projects.json');
@@ -69,7 +62,6 @@
             }
         }
 
-        // Display projects
         function displayProjects(projects) {
             const grid = document.getElementById('projects-grid');
             const noResults = document.getElementById('no-results');
@@ -95,7 +87,6 @@
       `).join('');
         }
 
-        // Search functionality
         function searchProjects(query) {
             const searchTerm = query.toLowerCase().trim();
 
@@ -113,17 +104,14 @@
             displayProjects(filteredProjects);
         }
 
-        // Initialize search input listener
         function initializeSearch() {
             const searchInput = document.getElementById('search-input');
 
-            // Real-time search as user types
             searchInput.addEventListener('input', (e) => {
                 searchProjects(e.target.value);
             });
         }
 
-        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             loadProjects();
             initializeSearch();
